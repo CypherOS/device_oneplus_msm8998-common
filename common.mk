@@ -139,8 +139,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl \
-    camera.device@3.2-impl \
-    Snap
+    camera.device@3.2-impl
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
@@ -177,10 +176,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
-
-# Doze
-PRODUCT_PACKAGES += \
-    OneplusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -330,10 +325,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-qti.xml
 
-# Pocketmode
-PRODUCT_PACKAGES += \
-    OneplusPocketMode
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service.oneplus5-libperfmgr
@@ -410,10 +401,6 @@ PRODUCT_PACKAGES += \
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
-# Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2018-08-01
-
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
@@ -457,5 +444,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt
 
-# Inherit from oppo-common
-#$(call inherit-product, device/oppo/common/common.mk)
+# Inherit from oneplus-common
+#$(call inherit-product, device/oneplus/common/common.mk)

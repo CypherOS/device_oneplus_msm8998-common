@@ -22,8 +22,8 @@
 # definition file).
 #
 
-# Inherit from oppo-common
--include device/oppo/common/BoardConfigCommon.mk
+# Inherit from oneplus-common
+-include device/oneplus/common/BoardConfigCommon.mk
 
 PLATFORM_PATH := device/oneplus/msm8998-common
 
@@ -75,7 +75,7 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
-TARGET_KERNEL_CONFIG := lineage_oneplus5_defconfig
+TARGET_KERNEL_CONFIG := aoscp_oneplus5_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
@@ -167,7 +167,6 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-WITH_LINEAGE_CHARGER := false
 
 # CNE and DPM
 BOARD_USES_QCNE := true
@@ -233,9 +232,6 @@ TARGET_PROVIDES_KEYMASTER := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# Lineage Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/lineagehw
 
 # NFC
 BOARD_NFC_CHIPSET := PN553
